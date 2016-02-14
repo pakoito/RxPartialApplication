@@ -1,6 +1,6 @@
 #RxPartialApplication
 
-RxPartialApplication is a library to allow partial application on RxJava function primitives.
+RxPartialApplication is a library to allow [partial application](https://en.wikipedia.org/wiki/Partial_application) on RxJava function primitives.
 
 ##Usage
 
