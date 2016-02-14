@@ -26,10 +26,12 @@ public static <T> Action2<Action1<T>, T> applicator() {
 }
 ```
 
-Filter by class:
+Filter only myself:
 ```
 Func1<Object, Boolean> isMe = RxPartialFunc(equalsFilter(), myUser);
 updatesFromDatabaseObservable().filter(isUser).map(toUser()).subscribe(/* ... */);
+
+...
 
 public static <T> Func2<T, U, Boolean> equalsFilter() {
     return (T first, U second) -> { return first.equals(second); };
