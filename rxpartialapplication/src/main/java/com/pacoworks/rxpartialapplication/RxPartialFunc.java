@@ -1,4 +1,3 @@
-
 /*
  * Copyright (c) pakoito 2016
  *
