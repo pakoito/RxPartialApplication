@@ -14,11 +14,26 @@ int result = multiplyBy100.call(5); // result == 500
 
 Single parameter applicator:
 ```
-Action2<Action1<T>, T> applicator = (Action1 action, Object parameter) -> { action.call(parameter) };
-Action1<String> salutator = RxPartialAction.apply(applicator, (String parameter) -> { System.out.println("Hello, " + parameter); } );
+Action1<String> salutator = RxPartialAction.apply(applicator(), (String parameter) -> { System.out.println("Hello, " + parameter); } );
 salutator.call("pakoito"); // prints "Hello, pakoito"
-Action1<Integer> duplicator = RxPartialFunc.apply(applicator, (int parameter) -> { System.out.println("Double of parameter is " + 2 * parameter); } );
+Action1<Integer> duplicator = RxPartialFunc.apply(applicator(), (int parameter) -> { System.out.println("Double of parameter is " + 2 * parameter); } );
 duplicator.call(2); // prints "Double of parameter is 4"
+
+...
+
+public static <T> Action2<Action1<T>, T> applicator() {
+    return (Action1<T> action, T parameter) -> { action.call(parameter); };
+}
+```
+
+Filter by class:
+```
+Func1<Object, Boolean> isMe = RxPartialFunc(equalsFilter(), myUser);
+updatesFromDatabaseObservable().filter(isUser).map(toUser()).subscribe(/* ... */);
+
+public static <T> Func2<T, U, Boolean> equalsFilter() {
+    return (T first, U second) -> { return first.equals(second); };
+}
 ```
 
 ##Distribution
