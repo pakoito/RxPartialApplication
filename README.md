@@ -33,7 +33,7 @@ updatesFromDatabaseObservable().filter(isUser).map(toUser()).subscribe(/* ... */
 
 ...
 
-public static <T> Func2<T, U, Boolean> equalsFilter() {
+public static <T, U> Func2<T, U, Boolean> equalsFilter() {
     return (T first, U second) -> { return first.equals(second); };
 }
 ```
