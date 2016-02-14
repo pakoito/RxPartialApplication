@@ -1,32 +1,25 @@
-#RxActions
+#RxPartialApplication
 
-RxActions is a library to smooth RxJava usage by combining actions.
-
-##Rationale
-
-Sometimes you have to describe side effects in your Observable chain, by means of doOnNext, doOnError, or even in the subscription. Writing several of those operators may incur on minimal performance penalties, and make the chain more verbose. RxActions allows you to combine those actions sequentially.
+RxPartialApplication is a library to allow partial application on RxJava function primitives.
 
 ##Usage
 
-RxActions comes as lazily evaluated ActionN and its main use case is for doOnNext, doOnError, and subscribe operators. Please note subscribe comes in several flavours that accept ActionN for better composability.
+RxPartialApplication contains two classes, `RxPartialAction` and `RxPartialFunc`. Each contains a set of `apply()` methods to do partial application from any ActionN and FuncN to any type of a lower arity. For example, you can partially apply a Func6 object with 3 prefilled parameters to obtain a Func3 object to be reused.
 
-Log correct server response, cache it, and display on UI:
+Function to multiply numbers by 100:
+```
+Func1<Integer, Integer> multiplyBy100 = RxPartialFunc.apply((int first, int second) -> { return first * second; }, 100);
+int result = multiplyBy100.call(5); // result == 500
+```
 
-    getApi().requestListFromServer()
-            .subscribe(RxActions.act(logElement(), cacheElements(), getUi.displayElements()));
-            
-Log an error to console, then display UI message:
-
-    getApi().requestListFromServer()
-            .subscribe(/* ... */,
-                       RxActions.act(logError(), getUi().displayErrorMessage()));
-                
-Log error, clear cache, and display a message before applying an error correction operator:
-
-    getApi().storeInDatabase()
-            .doOnError(RxActions.act(logError(), getUi().displayErrorMessage(), clearCache()))
-            .onErrorReturn(Collections.emptyList())
-            .subscribe(/* ... */);
+Single parameter applicator:
+```
+Action2<Action1<T>, T> applicator = (Action1 action, Object parameter) -> { action.call(parameter) };
+Action1<String> salutator = RxPartialAction.apply(applicator, (String parameter) -> { System.out.println("Hello, " + parameter); } );
+salutator.call("pakoito"); // prints "Hello, pakoito"
+Action1<Integer> duplicator = RxPartialFunc.apply(applicator, (int parameter) -> { System.out.println("Double of parameter is " + 2 * parameter); } );
+duplicator.call(2); // prints "Double of parameter is 4"
+```
 
 ##Distribution
 
@@ -40,7 +33,7 @@ Add as a dependency to your `build.gradle`
     
     dependencies {
         ...
-        compile 'com.github.pakoito:RxActions:1.0.+'
+        compile 'com.github.pakoito:RxPartialApplication:1.0.+'
         ...
     }
 
@@ -55,13 +48,13 @@ or to your `pom.xml`
     
     <dependency>
         <groupId>com.github.pakoito</groupId>
-        <artifactId>RxActions</artifactId>
+        <artifactId>RxPartialApplication</artifactId>
         <version>1.0.0</version>
     </dependency>
 
 ##License
 
-Copyright (c) pakoito 2015
+Copyright (c) pakoito 2016
 
 The Apache Software License, Version 2.0
 
