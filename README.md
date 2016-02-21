@@ -29,7 +29,7 @@ public static <T> Action2<Action1<T>, T> applicator() {
 Filter only myself:
 ```
 Func1<Object, Boolean> isMe = RxPartialFunc.apply(equalsFilter(), myUser);
-updatesFromDatabaseObservable().filter(isUser).map(toUser()).subscribe(/* ... */);
+updatesFromDatabaseObservable().filter(isMe).map(toUser()).subscribe(/* ... */);
 
 ...
 
