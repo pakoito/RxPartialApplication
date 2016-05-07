@@ -7,7 +7,12 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import rx.Observable;
-import rx.functions.*;
+import rx.functions.Func0;
+import rx.functions.Func1;
+import rx.functions.Func3;
+import rx.functions.Func6;
+import rx.functions.Func9;
+import rx.functions.FuncN;
 
 public class RxPartialFuncTest {
     private static final Func6 ACTION_6 = new Func6() {
@@ -47,6 +52,26 @@ public class RxPartialFuncTest {
                 .from(RxPartialFunc.apply(ACTION_N, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1,
                         2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3).getClass()
                 .getInterfaces()).filter(TestHelpers.classCompare(Func0.class)).toList()
+                .toBlocking().first();
+        Assert.assertEquals(1, classes.size());
+    }
+
+    @Test
+    public void applyRight() throws Exception {
+        List<Class<?>> classes = Observable
+                .from(RxPartialFunc.applyRight(ACTION_6, 1, 2, 3).getClass().getInterfaces())
+                .filter(TestHelpers.classCompare(Func3.class)).toList().toBlocking().first();
+        Assert.assertEquals(1, classes.size());
+        classes = Observable
+                .from(RxPartialFunc.applyRight(ACTION_9, 1, 2, 3, 4, 5, 6, 7, 8).getClass()
+                        .getInterfaces()).filter(TestHelpers.classCompare(Func1.class)).toList()
+                .toBlocking().first();
+        Assert.assertEquals(1, classes.size());
+        classes = Observable
+                .from(RxPartialFunc
+                        .applyRight(ACTION_N, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3,
+                                1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3).getClass()
+                        .getInterfaces()).filter(TestHelpers.classCompare(Func0.class)).toList()
                 .toBlocking().first();
         Assert.assertEquals(1, classes.size());
     }
