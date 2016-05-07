@@ -144,7 +144,7 @@ public final class RxPartialAction {
         };
     }
 
-    static Action0 applyRight(final ActionN actionN, final Object... args) {
+    static Action0 applyEnd(final ActionN actionN, final Object... args) {
         return new Action0() {
             @Override
             public void call() {
@@ -164,7 +164,7 @@ public final class RxPartialAction {
         };
     }
 
-    public static <A, T> Action1<T> applyRight(final Action2<T, A> action2, final A first) {
+    public static <A, T> Action1<T> applyEnd(final Action2<T, A> action2, final A first) {
         return new Action1<T>() {
             @Override
             public void call(T last) {
@@ -183,7 +183,7 @@ public final class RxPartialAction {
         };
     }
 
-    public static <A, B, T> Action1<T> applyRight(final Action3<T, A, B> action3, final A first,
+    public static <A, B, T> Action1<T> applyEnd(final Action3<T, A, B> action3, final A first,
             final B second) {
         return new Action1<T>() {
             @Override
@@ -203,7 +203,7 @@ public final class RxPartialAction {
         };
     }
 
-    public static <A, B, C, T> Action1<T> applyRight(final Action4<T, A, B, C> action4,
+    public static <A, B, C, T> Action1<T> applyEnd(final Action4<T, A, B, C> action4,
             final A first, final B second, final C third) {
         return new Action1<T>() {
             @Override
@@ -223,7 +223,7 @@ public final class RxPartialAction {
         };
     }
 
-    public static <A, B, C, D, T> Action1<T> applyRight(final Action5<T, A, B, C, D> action5,
+    public static <A, B, C, D, T> Action1<T> applyEnd(final Action5<T, A, B, C, D> action5,
             final A first, final B second, final C third, final D fourth) {
         return new Action1<T>() {
             @Override
@@ -243,7 +243,7 @@ public final class RxPartialAction {
         };
     }
 
-    public static <A, B, C, D, E, T> Action1<T> applyRight(final Action6<T, A, B, C, D, E> action6,
+    public static <A, B, C, D, E, T> Action1<T> applyEnd(final Action6<T, A, B, C, D, E> action6,
             final A first, final B second, final C third, final D fourth, final E fifth) {
         return new Action1<T>() {
             @Override
@@ -264,7 +264,7 @@ public final class RxPartialAction {
         };
     }
 
-    public static <A, B, C, D, E, F, T> Action1<T> applyRight(
+    public static <A, B, C, D, E, F, T> Action1<T> applyEnd(
             final Action7<T, A, B, C, D, E, F> action7, final A first, final B second,
             final C third, final D fourth, final E fifth, final F sixth) {
         return new Action1<T>() {
@@ -286,7 +286,7 @@ public final class RxPartialAction {
         };
     }
 
-    public static <A, B, C, D, E, F, G, T> Action1<T> applyRight(
+    public static <A, B, C, D, E, F, G, T> Action1<T> applyEnd(
             final Action8<T, A, B, C, D, E, F, G> action8, final A first, final B second,
             final C third, final D fourth, final E fifth, final F sixth, final G seventh) {
         return new Action1<T>() {
@@ -309,7 +309,7 @@ public final class RxPartialAction {
         };
     }
 
-    public static <A, B, C, D, E, F, G, H, T> Action1<T> applyRight(
+    public static <A, B, C, D, E, F, G, H, T> Action1<T> applyEnd(
             final Action9<T, A, B, C, D, E, F, G, H> action9, final A first, final B second,
             final C third, final D fourth, final E fifth, final F sixth, final G seventh,
             final H eighth) {
@@ -331,7 +331,7 @@ public final class RxPartialAction {
         };
     }
 
-    public static <A, T, U> Action2<T, U> applyRight(final Action3<T, U, A> action3, final A first) {
+    public static <A, T, U> Action2<T, U> applyEnd(final Action3<T, U, A> action3, final A first) {
         return new Action2<T, U>() {
             @Override
             public void call(T one, U two) {
@@ -350,7 +350,7 @@ public final class RxPartialAction {
         };
     }
 
-    public static <A, B, T, U> Action2<T, U> applyRight(final Action4<T, U, A, B> action4,
+    public static <A, B, T, U> Action2<T, U> applyEnd(final Action4<T, U, A, B> action4,
             final A first, final B second) {
         return new Action2<T, U>() {
             @Override
@@ -370,7 +370,7 @@ public final class RxPartialAction {
         };
     }
 
-    public static <A, B, C, T, U> Action2<T, U> applyRight(final Action5<T, U, A, B, C> action5,
+    public static <A, B, C, T, U> Action2<T, U> applyEnd(final Action5<T, U, A, B, C> action5,
             final A first, final B second, final C third) {
         return new Action2<T, U>() {
             @Override
@@ -390,7 +390,7 @@ public final class RxPartialAction {
         };
     }
 
-    public static <A, B, C, D, T, U> Action2<T, U> applyRight(
+    public static <A, B, C, D, T, U> Action2<T, U> applyEnd(
             final Action6<T, U, A, B, C, D> action6, final A first, final B second, final C third,
             final D fourth) {
         return new Action2<T, U>() {
@@ -412,7 +412,7 @@ public final class RxPartialAction {
         };
     }
 
-    public static <A, B, C, D, E, T, U> Action2<T, U> applyRight(
+    public static <A, B, C, D, E, T, U> Action2<T, U> applyEnd(
             final Action7<T, U, A, B, C, D, E> action7, final A first, final B second,
             final C third, final D fourth, final E fifth) {
         return new Action2<T, U>() {
@@ -434,7 +434,7 @@ public final class RxPartialAction {
         };
     }
 
-    public static <A, B, C, D, E, F, T, U> Action2<T, U> applyRight(
+    public static <A, B, C, D, E, F, T, U> Action2<T, U> applyEnd(
             final Action8<T, U, A, B, C, D, E, F> action8, final A first, final B second,
             final C third, final D fourth, final E fifth, final F sixth) {
         return new Action2<T, U>() {
@@ -456,7 +456,7 @@ public final class RxPartialAction {
         };
     }
 
-    public static <A, B, C, D, E, F, G, T, U> Action2<T, U> applyRight(
+    public static <A, B, C, D, E, F, G, T, U> Action2<T, U> applyEnd(
             final Action9<T, U, A, B, C, D, E, F, G> action9, final A first, final B second,
             final C third, final D fourth, final E fifth, final F sixth, final G seventh) {
         return new Action2<T, U>() {
@@ -478,7 +478,7 @@ public final class RxPartialAction {
         };
     }
 
-    public static <A, T, U, V> Action3<T, U, V> applyRight(final Action4<T, U, V, A> action4,
+    public static <A, T, U, V> Action3<T, U, V> applyEnd(final Action4<T, U, V, A> action4,
             final A first) {
         return new Action3<T, U, V>() {
             @Override
@@ -498,7 +498,7 @@ public final class RxPartialAction {
         };
     }
 
-    public static <A, B, T, U, V> Action3<T, U, V> applyRight(final Action5<T, U, V, A, B> action5,
+    public static <A, B, T, U, V> Action3<T, U, V> applyEnd(final Action5<T, U, V, A, B> action5,
             final A first, final B second) {
         return new Action3<T, U, V>() {
             @Override
@@ -518,7 +518,7 @@ public final class RxPartialAction {
         };
     }
 
-    public static <A, B, C, T, U, V> Action3<T, U, V> applyRight(
+    public static <A, B, C, T, U, V> Action3<T, U, V> applyEnd(
             final Action6<T, U, V, A, B, C> action6, final A first, final B second, final C third) {
         return new Action3<T, U, V>() {
             @Override
@@ -539,7 +539,7 @@ public final class RxPartialAction {
         };
     }
 
-    public static <A, B, C, D, T, U, V> Action3<T, U, V> applyRight(
+    public static <A, B, C, D, T, U, V> Action3<T, U, V> applyEnd(
             final Action7<T, U, V, A, B, C, D> action7, final A first, final B second,
             final C third, final D fourth) {
         return new Action3<T, U, V>() {
@@ -561,7 +561,7 @@ public final class RxPartialAction {
         };
     }
 
-    public static <A, B, C, D, E, T, U, V> Action3<T, U, V> applyRight(
+    public static <A, B, C, D, E, T, U, V> Action3<T, U, V> applyEnd(
             final Action8<T, U, V, A, B, C, D, E> action8, final A first, final B second,
             final C third, final D fourth, final E fifth) {
         return new Action3<T, U, V>() {
@@ -583,7 +583,7 @@ public final class RxPartialAction {
         };
     }
 
-    public static <A, B, C, D, E, F, T, U, V> Action3<T, U, V> applyRight(
+    public static <A, B, C, D, E, F, T, U, V> Action3<T, U, V> applyEnd(
             final Action9<T, U, V, A, B, C, D, E, F> action9, final A first, final B second,
             final C third, final D fourth, final E fifth, final F sixth) {
         return new Action3<T, U, V>() {
@@ -605,7 +605,7 @@ public final class RxPartialAction {
         };
     }
 
-    public static <A, T, U, V, W> Action4<T, U, V, W> applyRight(
+    public static <A, T, U, V, W> Action4<T, U, V, W> applyEnd(
             final Action5<T, U, V, W, A> action5, final A first) {
         return new Action4<T, U, V, W>() {
             @Override
@@ -625,7 +625,7 @@ public final class RxPartialAction {
         };
     }
 
-    public static <A, B, T, U, V, W> Action4<T, U, V, W> applyRight(
+    public static <A, B, T, U, V, W> Action4<T, U, V, W> applyEnd(
             final Action6<T, U, V, W, A, B> action6, final A first, final B second) {
         return new Action4<T, U, V, W>() {
             @Override
@@ -645,7 +645,7 @@ public final class RxPartialAction {
         };
     }
 
-    public static <A, B, C, T, U, V, W> Action4<T, U, V, W> applyRight(
+    public static <A, B, C, T, U, V, W> Action4<T, U, V, W> applyEnd(
             final Action7<T, U, V, W, A, B, C> action7, final A first, final B second, final C third) {
         return new Action4<T, U, V, W>() {
             @Override
@@ -666,7 +666,7 @@ public final class RxPartialAction {
         };
     }
 
-    public static <A, B, C, D, T, U, V, W> Action4<T, U, V, W> applyRight(
+    public static <A, B, C, D, T, U, V, W> Action4<T, U, V, W> applyEnd(
             final Action8<T, U, V, W, A, B, C, D> action8, final A first, final B second,
             final C third, final D fourth) {
         return new Action4<T, U, V, W>() {
@@ -688,7 +688,7 @@ public final class RxPartialAction {
         };
     }
 
-    public static <A, B, C, D, E, T, U, V, W> Action4<T, U, V, W> applyRight(
+    public static <A, B, C, D, E, T, U, V, W> Action4<T, U, V, W> applyEnd(
             final Action9<T, U, V, W, A, B, C, D, E> action9, final A first, final B second,
             final C third, final D fourth, final E fifth) {
         return new Action4<T, U, V, W>() {
@@ -710,7 +710,7 @@ public final class RxPartialAction {
         };
     }
 
-    public static <A, T, U, V, W, X> Action5<T, U, V, W, X> applyRight(
+    public static <A, T, U, V, W, X> Action5<T, U, V, W, X> applyEnd(
             final Action6<T, U, V, W, X, A> action6, final A first) {
         return new Action5<T, U, V, W, X>() {
             @Override
@@ -730,7 +730,7 @@ public final class RxPartialAction {
         };
     }
 
-    public static <A, B, T, U, V, W, X> Action5<T, U, V, W, X> applyRight(
+    public static <A, B, T, U, V, W, X> Action5<T, U, V, W, X> applyEnd(
             final Action7<T, U, V, W, X, A, B> action7, final A first, final B second) {
         return new Action5<T, U, V, W, X>() {
             @Override
@@ -751,7 +751,7 @@ public final class RxPartialAction {
         };
     }
 
-    public static <A, B, C, T, U, V, W, X> Action5<T, U, V, W, X> applyRight(
+    public static <A, B, C, T, U, V, W, X> Action5<T, U, V, W, X> applyEnd(
             final Action8<T, U, V, W, X, A, B, C> action8, final A first, final B second,
             final C third) {
         return new Action5<T, U, V, W, X>() {
@@ -773,7 +773,7 @@ public final class RxPartialAction {
         };
     }
 
-    public static <A, B, C, D, T, U, V, W, X> Action5<T, U, V, W, X> applyRight(
+    public static <A, B, C, D, T, U, V, W, X> Action5<T, U, V, W, X> applyEnd(
             final Action9<T, U, V, W, X, A, B, C, D> action9, final A first, final B second,
             final C third, final D fourth) {
         return new Action5<T, U, V, W, X>() {
@@ -795,7 +795,7 @@ public final class RxPartialAction {
         };
     }
 
-    public static <A, T, U, V, W, X, Y> Action6<T, U, V, W, X, Y> applyRight(
+    public static <A, T, U, V, W, X, Y> Action6<T, U, V, W, X, Y> applyEnd(
             final Action7<T, U, V, W, X, Y, A> action7, final A first) {
         return new Action6<T, U, V, W, X, Y>() {
             @Override
@@ -815,7 +815,7 @@ public final class RxPartialAction {
         };
     }
 
-    public static <A, B, T, U, V, W, X, Y> Action6<T, U, V, W, X, Y> applyRight(
+    public static <A, B, T, U, V, W, X, Y> Action6<T, U, V, W, X, Y> applyEnd(
             final Action8<T, U, V, W, X, Y, A, B> action8, final A first, final B second) {
         return new Action6<T, U, V, W, X, Y>() {
             @Override
@@ -836,7 +836,7 @@ public final class RxPartialAction {
         };
     }
 
-    public static <A, B, C, T, U, V, W, X, Y> Action6<T, U, V, W, X, Y> applyRight(
+    public static <A, B, C, T, U, V, W, X, Y> Action6<T, U, V, W, X, Y> applyEnd(
             final Action9<T, U, V, W, X, Y, A, B, C> action9, final A first, final B second,
             final C third) {
         return new Action6<T, U, V, W, X, Y>() {
@@ -858,7 +858,7 @@ public final class RxPartialAction {
         };
     }
 
-    public static <A, T, U, V, W, X, Y, Z> Action7<T, U, V, W, X, Y, Z> applyRight(
+    public static <A, T, U, V, W, X, Y, Z> Action7<T, U, V, W, X, Y, Z> applyEnd(
             final Action8<T, U, V, W, X, Y, Z, A> action8, final A first) {
         return new Action7<T, U, V, W, X, Y, Z>() {
             @Override
@@ -878,7 +878,7 @@ public final class RxPartialAction {
         };
     }
 
-    public static <A, B, T, U, V, W, X, Y, Z> Action7<T, U, V, W, X, Y, Z> applyRight(
+    public static <A, B, T, U, V, W, X, Y, Z> Action7<T, U, V, W, X, Y, Z> applyEnd(
             final Action9<T, U, V, W, X, Y, Z, A, B> action9, final A first, final B second) {
         return new Action7<T, U, V, W, X, Y, Z>() {
             @Override
@@ -899,7 +899,7 @@ public final class RxPartialAction {
         };
     }
 
-    public static <A, T, U, V, W, X, Y, Z, P> Action8<T, U, V, W, X, Y, Z, P> applyRight(
+    public static <A, T, U, V, W, X, Y, Z, P> Action8<T, U, V, W, X, Y, Z, P> applyEnd(
             final Action9<T, U, V, W, X, Y, Z, P, A> action9, final A first) {
         return new Action8<T, U, V, W, X, Y, Z, P>() {
             @Override

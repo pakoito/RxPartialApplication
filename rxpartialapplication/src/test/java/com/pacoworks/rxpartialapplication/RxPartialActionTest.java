@@ -55,19 +55,19 @@ public class RxPartialActionTest {
     }
 
     @Test
-    public void applyRight() throws Exception {
+    public void applyEnd() throws Exception {
         List<Class<?>> classes = Observable
-                .from(RxPartialAction.applyRight(ACTION_6, 1, 2, 3).getClass().getInterfaces())
+                .from(RxPartialAction.applyEnd(ACTION_6, 1, 2, 3).getClass().getInterfaces())
                 .filter(TestHelpers.classCompare(Action3.class)).toList().toBlocking().first();
         Assert.assertEquals(1, classes.size());
         classes = Observable
-                .from(RxPartialAction.applyRight(ACTION_9, 1, 2, 3, 4, 5, 6, 7, 8).getClass()
+                .from(RxPartialAction.applyEnd(ACTION_9, 1, 2, 3, 4, 5, 6, 7, 8).getClass()
                         .getInterfaces()).filter(TestHelpers.classCompare(Action1.class)).toList()
                 .toBlocking().first();
         Assert.assertEquals(1, classes.size());
         classes = Observable
                 .from(RxPartialAction
-                        .applyRight(ACTION_N, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3,
+                        .applyEnd(ACTION_N, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3,
                                 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3).getClass()
                         .getInterfaces()).filter(TestHelpers.classCompare(Action0.class)).toList()
                 .toBlocking().first();

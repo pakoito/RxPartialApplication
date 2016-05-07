@@ -146,7 +146,7 @@ public final class RxPartialFunc {
         };
     }
 
-    public static <R> Func0<R> applyRight(final FuncN<R> funcN, final Object... args) {
+    public static <R> Func0<R> applyEnd(final FuncN<R> funcN, final Object... args) {
         return new Func0<R>() {
             @Override
             public R call() {
@@ -166,7 +166,7 @@ public final class RxPartialFunc {
         };
     }
 
-    public static <A, T, R> Func1<T, R> applyRight(final Func2<T, A, R> func2, final A first) {
+    public static <A, T, R> Func1<T, R> applyEnd(final Func2<T, A, R> func2, final A first) {
         return new Func1<T, R>() {
             @Override
             public R call(T last) {
@@ -185,7 +185,7 @@ public final class RxPartialFunc {
         };
     }
 
-    public static <A, B, T, R> Func1<T, R> applyRight(final Func3<T, A, B, R> func3, final A first,
+    public static <A, B, T, R> Func1<T, R> applyEnd(final Func3<T, A, B, R> func3, final A first,
             final B second) {
         return new Func1<T, R>() {
             @Override
@@ -205,7 +205,7 @@ public final class RxPartialFunc {
         };
     }
 
-    public static <A, B, C, T, R> Func1<T, R> applyRight(final Func4<T, A, B, C, R> func4,
+    public static <A, B, C, T, R> Func1<T, R> applyEnd(final Func4<T, A, B, C, R> func4,
             final A first, final B second, final C third) {
         return new Func1<T, R>() {
             @Override
@@ -225,7 +225,7 @@ public final class RxPartialFunc {
         };
     }
 
-    public static <A, B, C, D, T, R> Func1<T, R> applyRight(final Func5<T, A, B, C, D, R> func5,
+    public static <A, B, C, D, T, R> Func1<T, R> applyEnd(final Func5<T, A, B, C, D, R> func5,
             final A first, final B second, final C third, final D fourth) {
         return new Func1<T, R>() {
             @Override
@@ -245,7 +245,7 @@ public final class RxPartialFunc {
         };
     }
 
-    public static <A, B, C, D, E, T, R> Func1<T, R> applyRight(
+    public static <A, B, C, D, E, T, R> Func1<T, R> applyEnd(
             final Func6<T, A, B, C, D, E, R> func6, final A first, final B second, final C third,
             final D fourth, final E fifth) {
         return new Func1<T, R>() {
@@ -267,7 +267,7 @@ public final class RxPartialFunc {
         };
     }
 
-    public static <A, B, C, D, E, F, T, R> Func1<T, R> applyRight(
+    public static <A, B, C, D, E, F, T, R> Func1<T, R> applyEnd(
             final Func7<T, A, B, C, D, E, F, R> func7, final A first, final B second,
             final C third, final D fourth, final E fifth, final F sixth) {
         return new Func1<T, R>() {
@@ -289,7 +289,7 @@ public final class RxPartialFunc {
         };
     }
 
-    public static <A, B, C, D, E, F, G, T, R> Func1<T, R> applyRight(
+    public static <A, B, C, D, E, F, G, T, R> Func1<T, R> applyEnd(
             final Func8<T, A, B, C, D, E, F, G, R> func8, final A first, final B second,
             final C third, final D fourth, final E fifth, final F sixth, final G seventh) {
         return new Func1<T, R>() {
@@ -313,7 +313,7 @@ public final class RxPartialFunc {
         };
     }
 
-    public static <A, B, C, D, E, F, G, H, T, R> Func1<T, R> applyRight(
+    public static <A, B, C, D, E, F, G, H, T, R> Func1<T, R> applyEnd(
             final Func9<T, A, B, C, D, E, F, G, H, R> func9, final A first, final B second,
             final C third, final D fourth, final E fifth, final F sixth, final G seventh,
             final H eighth) {
@@ -336,7 +336,7 @@ public final class RxPartialFunc {
         };
     }
 
-    public static <A, T, U, R> Func2<T, U, R> applyRight(final Func3<T, U, A, R> func3,
+    public static <A, T, U, R> Func2<T, U, R> applyEnd(final Func3<T, U, A, R> func3,
             final A first) {
         return new Func2<T, U, R>() {
             @Override
@@ -356,7 +356,7 @@ public final class RxPartialFunc {
         };
     }
 
-    public static <A, B, T, U, R> Func2<T, U, R> applyRight(final Func4<T, U, A, B, R> func4,
+    public static <A, B, T, U, R> Func2<T, U, R> applyEnd(final Func4<T, U, A, B, R> func4,
             final A first, final B second) {
         return new Func2<T, U, R>() {
             @Override
@@ -376,7 +376,7 @@ public final class RxPartialFunc {
         };
     }
 
-    public static <A, B, C, T, U, R> Func2<T, U, R> applyRight(final Func5<T, U, A, B, C, R> func5,
+    public static <A, B, C, T, U, R> Func2<T, U, R> applyEnd(final Func5<T, U, A, B, C, R> func5,
             final A first, final B second, final C third) {
         return new Func2<T, U, R>() {
             @Override
@@ -397,7 +397,7 @@ public final class RxPartialFunc {
         };
     }
 
-    public static <A, B, C, D, T, U, R> Func2<T, U, R> applyRight(
+    public static <A, B, C, D, T, U, R> Func2<T, U, R> applyEnd(
             final Func6<T, U, A, B, C, D, R> func6, final A first, final B second, final C third,
             final D fourth) {
         return new Func2<T, U, R>() {
@@ -419,7 +419,7 @@ public final class RxPartialFunc {
         };
     }
 
-    public static <A, B, C, D, E, T, U, R> Func2<T, U, R> applyRight(
+    public static <A, B, C, D, E, T, U, R> Func2<T, U, R> applyEnd(
             final Func7<T, U, A, B, C, D, E, R> func7, final A first, final B second,
             final C third, final D fourth, final E fifth) {
         return new Func2<T, U, R>() {
@@ -441,7 +441,7 @@ public final class RxPartialFunc {
         };
     }
 
-    public static <A, B, C, D, E, F, T, U, R> Func2<T, U, R> applyRight(
+    public static <A, B, C, D, E, F, T, U, R> Func2<T, U, R> applyEnd(
             final Func8<T, U, A, B, C, D, E, F, R> func8, final A first, final B second,
             final C third, final D fourth, final E fifth, final F sixth) {
         return new Func2<T, U, R>() {
@@ -463,7 +463,7 @@ public final class RxPartialFunc {
         };
     }
 
-    public static <A, B, C, D, E, F, G, T, U, R> Func2<T, U, R> applyRight(
+    public static <A, B, C, D, E, F, G, T, U, R> Func2<T, U, R> applyEnd(
             final Func9<T, U, A, B, C, D, E, F, G, R> func9, final A first, final B second,
             final C third, final D fourth, final E fifth, final F sixth, final G seventh) {
         return new Func2<T, U, R>() {
@@ -485,7 +485,7 @@ public final class RxPartialFunc {
         };
     }
 
-    public static <A, T, U, V, R> Func3<T, U, V, R> applyRight(final Func4<T, U, V, A, R> func4,
+    public static <A, T, U, V, R> Func3<T, U, V, R> applyEnd(final Func4<T, U, V, A, R> func4,
             final A first) {
         return new Func3<T, U, V, R>() {
             @Override
@@ -505,7 +505,7 @@ public final class RxPartialFunc {
         };
     }
 
-    public static <A, B, T, U, V, R> Func3<T, U, V, R> applyRight(
+    public static <A, B, T, U, V, R> Func3<T, U, V, R> applyEnd(
             final Func5<T, U, V, A, B, R> func5, final A first, final B second) {
         return new Func3<T, U, V, R>() {
             @Override
@@ -525,7 +525,7 @@ public final class RxPartialFunc {
         };
     }
 
-    public static <A, B, C, T, U, V, R> Func3<T, U, V, R> applyRight(
+    public static <A, B, C, T, U, V, R> Func3<T, U, V, R> applyEnd(
             final Func6<T, U, V, A, B, C, R> func6, final A first, final B second, final C third) {
         return new Func3<T, U, V, R>() {
             @Override
@@ -546,7 +546,7 @@ public final class RxPartialFunc {
         };
     }
 
-    public static <A, B, C, D, T, U, V, R> Func3<T, U, V, R> applyRight(
+    public static <A, B, C, D, T, U, V, R> Func3<T, U, V, R> applyEnd(
             final Func7<T, U, V, A, B, C, D, R> func7, final A first, final B second,
             final C third, final D fourth) {
         return new Func3<T, U, V, R>() {
@@ -568,7 +568,7 @@ public final class RxPartialFunc {
         };
     }
 
-    public static <A, B, C, D, E, T, U, V, R> Func3<T, U, V, R> applyRight(
+    public static <A, B, C, D, E, T, U, V, R> Func3<T, U, V, R> applyEnd(
             final Func8<T, U, V, A, B, C, D, E, R> func8, final A first, final B second,
             final C third, final D fourth, final E fifth) {
         return new Func3<T, U, V, R>() {
@@ -590,7 +590,7 @@ public final class RxPartialFunc {
         };
     }
 
-    public static <A, B, C, D, E, F, T, U, V, R> Func3<T, U, V, R> applyRight(
+    public static <A, B, C, D, E, F, T, U, V, R> Func3<T, U, V, R> applyEnd(
             final Func9<T, U, V, A, B, C, D, E, F, R> func9, final A first, final B second,
             final C third, final D fourth, final E fifth, final F sixth) {
         return new Func3<T, U, V, R>() {
@@ -612,7 +612,7 @@ public final class RxPartialFunc {
         };
     }
 
-    public static <A, T, U, V, W, R> Func4<T, U, V, W, R> applyRight(
+    public static <A, T, U, V, W, R> Func4<T, U, V, W, R> applyEnd(
             final Func5<T, U, V, W, A, R> func5, final A first) {
         return new Func4<T, U, V, W, R>() {
             @Override
@@ -632,7 +632,7 @@ public final class RxPartialFunc {
         };
     }
 
-    public static <A, B, T, U, V, W, R> Func4<T, U, V, W, R> applyRight(
+    public static <A, B, T, U, V, W, R> Func4<T, U, V, W, R> applyEnd(
             final Func6<T, U, V, W, A, B, R> func6, final A first, final B second) {
         return new Func4<T, U, V, W, R>() {
             @Override
@@ -652,7 +652,7 @@ public final class RxPartialFunc {
         };
     }
 
-    public static <A, B, C, T, U, V, W, R> Func4<T, U, V, W, R> applyRight(
+    public static <A, B, C, T, U, V, W, R> Func4<T, U, V, W, R> applyEnd(
             final Func7<T, U, V, W, A, B, C, R> func7, final A first, final B second, final C third) {
         return new Func4<T, U, V, W, R>() {
             @Override
@@ -673,7 +673,7 @@ public final class RxPartialFunc {
         };
     }
 
-    public static <A, B, C, D, T, U, V, W, R> Func4<T, U, V, W, R> applyRight(
+    public static <A, B, C, D, T, U, V, W, R> Func4<T, U, V, W, R> applyEnd(
             final Func8<T, U, V, W, A, B, C, D, R> func8, final A first, final B second,
             final C third, final D fourth) {
         return new Func4<T, U, V, W, R>() {
@@ -695,7 +695,7 @@ public final class RxPartialFunc {
         };
     }
 
-    public static <A, B, C, D, E, T, U, V, W, R> Func4<T, U, V, W, R> applyRight(
+    public static <A, B, C, D, E, T, U, V, W, R> Func4<T, U, V, W, R> applyEnd(
             final Func9<T, U, V, W, A, B, C, D, E, R> func9, final A first, final B second,
             final C third, final D fourth, final E fifth) {
         return new Func4<T, U, V, W, R>() {
@@ -717,7 +717,7 @@ public final class RxPartialFunc {
         };
     }
 
-    public static <A, T, U, V, W, X, R> Func5<T, U, V, W, X, R> applyRight(
+    public static <A, T, U, V, W, X, R> Func5<T, U, V, W, X, R> applyEnd(
             final Func6<T, U, V, W, X, A, R> func6, final A first) {
         return new Func5<T, U, V, W, X, R>() {
             @Override
@@ -737,7 +737,7 @@ public final class RxPartialFunc {
         };
     }
 
-    public static <A, B, T, U, V, W, X, R> Func5<T, U, V, W, X, R> applyRight(
+    public static <A, B, T, U, V, W, X, R> Func5<T, U, V, W, X, R> applyEnd(
             final Func7<T, U, V, W, X, A, B, R> func7, final A first, final B second) {
         return new Func5<T, U, V, W, X, R>() {
             @Override
@@ -758,7 +758,7 @@ public final class RxPartialFunc {
         };
     }
 
-    public static <A, B, C, T, U, V, W, X, R> Func5<T, U, V, W, X, R> applyRight(
+    public static <A, B, C, T, U, V, W, X, R> Func5<T, U, V, W, X, R> applyEnd(
             final Func8<T, U, V, W, X, A, B, C, R> func8, final A first, final B second,
             final C third) {
         return new Func5<T, U, V, W, X, R>() {
@@ -780,7 +780,7 @@ public final class RxPartialFunc {
         };
     }
 
-    public static <A, B, C, D, T, U, V, W, X, R> Func5<T, U, V, W, X, R> applyRight(
+    public static <A, B, C, D, T, U, V, W, X, R> Func5<T, U, V, W, X, R> applyEnd(
             final Func9<T, U, V, W, X, A, B, C, D, R> func9, final A first, final B second,
             final C third, final D fourth) {
         return new Func5<T, U, V, W, X, R>() {
@@ -802,7 +802,7 @@ public final class RxPartialFunc {
         };
     }
 
-    public static <A, T, U, V, W, X, Y, R> Func6<T, U, V, W, X, Y, R> applyRight(
+    public static <A, T, U, V, W, X, Y, R> Func6<T, U, V, W, X, Y, R> applyEnd(
             final Func7<T, U, V, W, X, Y, A, R> func7, final A first) {
         return new Func6<T, U, V, W, X, Y, R>() {
             @Override
@@ -822,7 +822,7 @@ public final class RxPartialFunc {
         };
     }
 
-    public static <A, B, T, U, V, W, X, Y, R> Func6<T, U, V, W, X, Y, R> applyRight(
+    public static <A, B, T, U, V, W, X, Y, R> Func6<T, U, V, W, X, Y, R> applyEnd(
             final Func8<T, U, V, W, X, Y, A, B, R> func8, final A first, final B second) {
         return new Func6<T, U, V, W, X, Y, R>() {
             @Override
@@ -843,7 +843,7 @@ public final class RxPartialFunc {
         };
     }
 
-    public static <A, B, C, T, U, V, W, X, Y, R> Func6<T, U, V, W, X, Y, R> applyRight(
+    public static <A, B, C, T, U, V, W, X, Y, R> Func6<T, U, V, W, X, Y, R> applyEnd(
             final Func9<T, U, V, W, X, Y, A, B, C, R> func9, final A first, final B second,
             final C third) {
         return new Func6<T, U, V, W, X, Y, R>() {
@@ -865,7 +865,7 @@ public final class RxPartialFunc {
         };
     }
 
-    public static <A, T, U, V, W, X, Y, Z, R> Func7<T, U, V, W, X, Y, Z, R> applyRight(
+    public static <A, T, U, V, W, X, Y, Z, R> Func7<T, U, V, W, X, Y, Z, R> applyEnd(
             final Func8<T, U, V, W, X, Y, Z, A, R> func8, final A first) {
         return new Func7<T, U, V, W, X, Y, Z, R>() {
             @Override
@@ -885,7 +885,7 @@ public final class RxPartialFunc {
         };
     }
 
-    public static <A, B, T, U, V, W, X, Y, Z, R> Func7<T, U, V, W, X, Y, Z, R> applyRight(
+    public static <A, B, T, U, V, W, X, Y, Z, R> Func7<T, U, V, W, X, Y, Z, R> applyEnd(
             final Func9<T, U, V, W, X, Y, Z, A, B, R> func9, final A first, final B second) {
         return new Func7<T, U, V, W, X, Y, Z, R>() {
             @Override
@@ -906,7 +906,7 @@ public final class RxPartialFunc {
         };
     }
 
-    public static <A, T, U, V, W, X, Y, Z, P, R> Func8<T, U, V, W, X, Y, Z, P, R> applyRight(
+    public static <A, T, U, V, W, X, Y, Z, P, R> Func8<T, U, V, W, X, Y, Z, P, R> applyEnd(
             final Func9<T, U, V, W, X, Y, Z, P, A, R> func9, final A first) {
         return new Func8<T, U, V, W, X, Y, Z, P, R>() {
             @Override
