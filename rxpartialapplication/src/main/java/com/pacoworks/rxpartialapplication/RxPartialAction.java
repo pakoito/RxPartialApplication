@@ -139,6 +139,15 @@ public final class RxPartialAction {
         return new Action0() {
             @Override
             public void call() {
+                actionN.call(args);
+            }
+        };
+    }
+
+    static Action0 applyRight(final ActionN actionN, final Object... args) {
+        return new Action0() {
+            @Override
+            public void call() {
                 Arrays.sort(args, Collections.reverseOrder());
                 actionN.call(args);
             }
