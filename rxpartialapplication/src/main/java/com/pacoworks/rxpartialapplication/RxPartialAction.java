@@ -126,11 +126,11 @@ public final class RxPartialAction {
     public static <A, B, C, D, E, F, G, H, I> Action0 apply(
             final Action9<A, B, C, D, E, F, G, H, I> action9, final A first, final B second,
             final C third, final D fourth, final E fifth, final F sixth, final G seventh,
-            final H eighth, final I nineth) {
+            final H eighth, final I ninth) {
         return new Action0() {
             @Override
             public void call() {
-                action9.call(first, second, third, fourth, fifth, sixth, seventh, eighth, nineth);
+                action9.call(first, second, third, fourth, fifth, sixth, seventh, eighth, ninth);
             }
         };
     }

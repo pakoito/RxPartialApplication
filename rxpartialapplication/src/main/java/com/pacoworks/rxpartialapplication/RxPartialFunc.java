@@ -127,12 +127,12 @@ public final class RxPartialFunc {
     public static <A, B, C, D, E, F, G, H, I, R> Func0<R> apply(
             final Func9<A, B, C, D, E, F, G, H, I, R> func9, final A first, final B second,
             final C third, final D fourth, final E fifth, final F sixth, final G seventh,
-            final H eighth, final I nineth) {
+            final H eighth, final I ninth) {
         return new Func0<R>() {
             @Override
             public R call() {
                 return func9.call(first, second, third, fourth, fifth, sixth, seventh, eighth,
-                        nineth);
+                        ninth);
             }
         };
     }
