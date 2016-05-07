@@ -4,7 +4,7 @@ RxPartialApplication is a library to allow [partial application](https://en.wiki
 
 ##Usage
 
-RxPartialApplication contains two classes, `RxPartialAction` and `RxPartialFunc`. Each contains a set of `apply()` methods to do partial application from any ActionN and FuncN to any type of a lower arity. For example, you can partially apply a Func6 object with 3 prefilled parameters to obtain a Func3 object to be reused.
+RxPartialApplication contains two classes, `RxPartialAction` and `RxPartialFunc`. Each contains a set of `apply()` and `applyRight()` methods to do partial application from any ActionN and FuncN to any type of a lower arity. For example, you can partially apply a Func6 object with 3 prefilled parameters to obtain a Func3 object to be reused.
 
 Function to multiply numbers by 100:
 ```java
@@ -38,6 +38,19 @@ public static <T, U> Func2<T, U, Boolean> equalsFilter() {
 }
 ```
 
+You can also partially apply from the end using `applyRight()`
+
+```java
+Func1<String, Observable<String>>> requestForUrl = 
+        RxPartialFunc.applyRight(this::doNetworkRequest(), localDataStorage, ServerInfo.default(), RetrofitRequest.getInstance());
+
+requestForUrl.call("http://www.mycompany.com/api/users").subscribe(/* ... */);
+
+Observable<String> doNetworkRequest(String url, DataStorage storage, ServerInformation server, HttpClient client){
+  ...
+}
+```
+
 ##Distribution
 
 Add as a dependency to your `build.gradle`
@@ -50,7 +63,7 @@ repositories {
     
 dependencies {
     ...
-    compile 'com.github.pakoito:RxPartialApplication:1.0.0'
+    compile 'com.github.pakoito:RxPartialApplication:1.1.0'
     ...
 }
 ```
@@ -67,7 +80,7 @@ or to your `pom.xml`
 <dependency>
     <groupId>com.github.pakoito</groupId>
     <artifactId>RxPartialApplication</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
 </dependency>
 ```
 
