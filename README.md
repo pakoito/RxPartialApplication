@@ -2,6 +2,8 @@
 
 RxPartialApplication is a library to allow [partial application](https://en.wikipedia.org/wiki/Partial_application) on RxJava function primitives.
 
+For the RxJava 2.X version please go to [RxPartialApplication2](https://github.com/pakoito/RxPartialApplication2).
+
 ##Usage
 
 RxPartialApplication contains two classes, `RxPartialAction` and `RxPartialFunc`. Each contains a set of `apply()` (apply parameters from left to right) and `applyEnd()` (apply parameters from right to left) methods to do partial application from any ActionN and FuncN to any type of a lower arity. For example, you can partially apply a Func6 object with 3 prefilled parameters to obtain a Func3 object to be reused.
